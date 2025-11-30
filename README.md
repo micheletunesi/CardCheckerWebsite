@@ -1,4 +1,5 @@
 # CardCheckerWebsite
+Version 0.2
 
 **Project Overview:**
 - **Purpose:** CardCheckerWebsite is a small static client-side tool to help collectors manage game card lists. It provides utilities to generate a new list, update an existing list after finding cards, compare lists for differences, and host editable FAQ and credits data via JSON files.
@@ -66,17 +67,13 @@
 **Styling notes (`style.css`):**
 - The site uses a green top banner with centered heading and button styles for the four main actions. Preview numbers are styled with `.num`, `.num.added`, and `.num.removed` classes to show visual state.
 
-**Development & Contribution:**
-- This is a small static project intended to be edited directly. Contributions or changes you might make:
-  - Improve copy/paste parsing robustness in `parseSections()` for more edge cases.
-  - Replace `document.execCommand('copy')` fallback with the modern Clipboard API across all browsers.
-  - Add tests (unit tests for parsing functions) or extract parsing logic into small utilities.
-
-**Analytics / Visit counter (optional):**
-- The project currently does not include persistent analytics. If you want a simple visit counter, options include:
-  - Google Apps Script + Google Sheets endpoint (serverless, easy to set up).
-  - Third-party services that accept POST requests (Formspree, Netlify Forms, etc.).
-  - A small server endpoint (e.g., a tiny Node/Express or serverless function) to record hits.
+**Future fixes**
+- Rethinking the list updates, right now it feels a bit clunky.
+- Adjust fonts and buttons
+    - Back to home button is weird
+    - You need to click for the list to be inserted in the system
+- Downloadable .txt
+- Analytics counter
 
 **Troubleshooting:**
 - If JSON files fail to load when opening pages directly (file://), serve the site with a static server (see Quick Start above).
