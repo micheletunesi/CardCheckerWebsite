@@ -5,9 +5,10 @@ body {
 }
 
 header {
-    background: #0088cc;
+    background: green;
     color: white;
     padding: 15px;
+    text-align: center;
 }
 
 textarea {
@@ -22,4 +23,174 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    margin: 30px auto;
+}
+
+.button-container button {
+    padding: 15px 20px;
+    font-size: 16px;
+    width: 100%;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.controls-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls-row button {
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+.output-section {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.output-section textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    font-family: monospace;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.output-section button {
+    align-self: center;
+}
+
+.output-preview {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #222;
+}
+
+.output-preview .conflict {
+    background: #ffd6d6;
+    color: #700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    transition: background-color 0.25s ease;
+}
+
+.warning {
+    transition: opacity 0.2s ease;
+}
+
+.output-preview .num {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 0 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.output-preview .num.added {
+    background: #e6ffea;
+    color: #084b0f;
+}
+
+.output-preview .num.removed {
+    background: #ffd6d6;
+    color: #700;
+    text-decoration: line-through;
+}
+
+.output-preview .sep { color: #666; }
+
+.compare-columns {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.compare-col {
+    flex: 1 1 0;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.compare-col textarea {
+    height: 340px;
+    box-sizing: border-box;
+}
+
+.compare-col .output-preview {
+    height: 340px;
+    box-sizing: border-box;
+}
+
+.faq-container {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-left: 4px solid green;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    margin: 0 0 10px 0;
+    color: green;
+    font-size: 1.1em;
+}
+
+.faq-answer {
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
 }

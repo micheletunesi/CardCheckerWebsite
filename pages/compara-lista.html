@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compara Lista - CardChecker</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Benvenuti su CardChecker</h1>
+    </header>
+
+    <section>
+        <h2>Compara Lista</h2>
+
+        <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin:20px 0;">
+            <div class="input-group" style="flex:1;min-width:250px;max-width:400px;">
+                <label for="pasteListA">Incolla Lista A:</label>
+                <textarea id="pasteListA" placeholder="Incolla la prima lista qui" rows="6"></textarea>
+            </div>
+
+            <div class="input-group" style="flex:1;min-width:250px;max-width:400px;">
+                <label for="pasteListB">Incolla Lista B:</label>
+                <textarea id="pasteListB" placeholder="Incolla la seconda lista qui" rows="6"></textarea>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin:15px 0;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+            <button onclick="compareListsUpdate()" style="padding:12px 24px;font-size:16px;">Calcola Confronto</button>
+            <button onclick="window.location.href='../index.html'" style="background:#666;padding:12px 24px;font-size:16px;">Torna alla Home</button>
+        </div>
+
+        <div id="output" class="output-section" style="display:none;">
+            <label for="comparisonOutput">Risultato del Confronto:</label>
+            <textarea id="comparisonOutput" readonly></textarea>
+            <div style="text-align:center;">
+                <button onclick="copyComparisonToClipboard()">Copia negli Appunti</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="siteCredits"></div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiorna Lista - CardChecker</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Benvenuti su CardChecker</h1>
+    </header>
+
+    <section>
+        <h2>Aggiorna Lista</h2>
+
+        <div class="input-group">
+            <label for="pasteInput">Incolla qui la lista</label>
+            <textarea id="pasteInput" placeholder="Incolla l'intero testo generato da 'Crea lista' qui" rows="6"></textarea>
+            <div class="controls-row">
+                <button onclick="loadFromPaste()">Carica Lista</button>
+                <button onclick="window.location.href='../index.html'">Torna alla Home</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="missingFoundInput">Romuovi da lista mancanti</label>
+            <input id="missingFoundInput" placeholder="Es. 3,7,42">
+            <button onclick="applyFoundMissing()">Applica Carte Trovate</button>
+            <div id="warning-missing" style="max-width:600px;margin:8px 0 0 0;color:#a33;display:none;font-size:0.95em;"></div>
+            <div style="margin-top:6px;">
+                <button onclick="clearWarningMissing()" style="background:#666;">Pulisci Avviso</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="doublesInput">Aggiungi doppie (anche con ripetizioni)</label>
+            <input id="doublesInput" placeholder="Es. 5,5,12,5">
+            <button onclick="addDoubles()">Aggiungi Doppie</button>
+            <div id="warning-doubles" style="max-width:600px;margin:8px 0 0 0;color:#a33;display:none;font-size:0.95em;"></div>
+            <div style="margin-top:6px;">
+                <button onclick="clearWarningDoubles()" style="background:#666;">Pulisci Avviso</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="removeDoublesInput">Rimuovi doppie (anche con ripetizioni)</label>
+            <input id="removeDoublesInput" placeholder="Es. 5,5,12">
+            <button onclick="removeDoubles()">Rimuovi Doppie</button>
+            <div id="warning-remove-doubles" style="max-width:600px;margin:8px 0 0 0;color:#a33;display:none;font-size:0.95em;"></div>
+            <div style="margin-top:6px;">
+                <button onclick="clearWarningRemoveDoubles()" style="background:#666;">Pulisci Avviso</button>
+            </div>
+        </div>
+
+        <div id="output" class="output-section" style="display:block;">
+            <h3 style="font-weight:bold;margin-bottom:10px;">Lista aggiornata</h3>
+            <div class="compare-columns">
+                <div class="compare-col">
+                    <label>Lista aggiornata con cambi evidenziati</label>
+                    <div id="originalPreview" class="output-preview"></div>
+                </div>
+                <div class="compare-col">
+                    <label for="listOutput">Lista aggiornata</label>
+                    <textarea id="listOutput"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:14px;">
+            <button onclick="copyToClipboard()">Copia negli Appunti</button>
+        </div>
+    </section>
+
+    <footer>
+        <div id="siteCredits"></div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

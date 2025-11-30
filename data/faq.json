@@ -1,0 +1,16 @@
+{
+  "faqs": [
+    {
+      "question": "Come funziona Crea Lista?",
+      "answer": "Inserisci un numero N e il tool genera una lista di carte da 1 a N, insieme alle sezioni per carte mancanti e doppie."
+    },
+    {
+      "question": "Cosa fa Aggiorna Lista?",
+      "answer": "Aggiorna Lista ti permette di prendere una lista generata, rimuovere le carte trovate dai mancanti e aggiungere le doppie che hai trovato."
+    },
+    {
+      "question": "Come posso confrontare due liste?",
+      "answer": "Usa Compara Lista: incolla due liste (A e B) e il tool mostra quali carte doppie sono presenti solo in una delle due."
+    }
+  ]
+}

@@ -8,18 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Simple Tools</h1>
+        <h1>Benvenuti su CardChecker</h1>
     </header>
 
     <section>
-        <h2>List Editor</h2>
-        <textarea id="listInput" placeholder="Write items..."></textarea>
-        <button id="addButton">Add Item</button>
-        <button id="clearButton">Clear List</button>
-
-        <ul id="listOutput"></ul>
+        <div class="button-container">
+            <button onclick="navigateTo('pages/crea-lista.html')">Crea lista</button>
+            <button onclick="navigateTo('pages/aggiorna-lista.html')">Aggiorna lista</button>
+            <button onclick="navigateTo('pages/compara-lista.html')">Compara lista</button>
+            <button onclick="navigateTo('pages/faq.html')">FAQ</button>
+        </div>
     </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <script src="js/app.js"></script>
+
+    <footer>
+        <div id="siteCredits"></div>
+    </footer>
